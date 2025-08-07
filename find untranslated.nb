@@ -1,0 +1,231 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10637,        223]
+NotebookOptionsPosition[     10210,        207]
+NotebookOutlinePosition[     10553,        222]
+CellTagsIndexPosition[     10510,        219]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"SetDirectory", "@", 
+   RowBox[{"NotebookDirectory", "[", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"FileNames", "[", "]"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"lines", " ", "=", 
+   RowBox[{"StringSplit", "[", 
+    RowBox[{
+     RowBox[{"Import", "[", 
+      RowBox[{"\"\<ASTEROI2.PAS\>\"", ",", "\"\<text\>\""}], "]"}], ",", 
+     "\"\<\\n\>\""}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"MaxCode", "[", "line_", "]"}], ":=", 
+   RowBox[{"Max", "@", 
+    RowBox[{"ToCharacterCode", "@", "line"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"tab", "=", 
+   RowBox[{
+    RowBox[{"Reap", "[", 
+     RowBox[{"MapIndexed", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"MaxCode", "@", "#1"}], " ", ">", " ", "127"}], ",", 
+          RowBox[{"Sow", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{
+             "#2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+             ",", "#1"}], "}"}], "]"}]}], "]"}], "&"}], ",", "lines"}], "]"}],
+      "]"}], "\[LeftDoubleBracket]", 
+    RowBox[{"2", ",", "1"}], "\[RightDoubleBracket]"}]}], ";"}], "\n", 
+ RowBox[{"tab", "//", "TableForm"}]}], "Input",
+ CellChangeTimes->{{3.963532961018416*^9, 3.9635329781585464`*^9}, {
+  3.9635336471810884`*^9, 3.9635336548942614`*^9}},
+ CellLabel->"In[43]:=",ExpressionUUID->"b6e11d68-d874-4470-a056-aa5305518467"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"2", "\<\"const b=18;{\[Sterling]\[ATilde]\[AAcute]\[AHat]\
+\[RegisteredTrademark]\[AHat]\[NonBreakingSpace]}a=4;{\[AGrave]\
+\[NonBreakingSpace]\[Section]\[DiscretionaryHyphen]\[RegisteredTrademark]\
+\[RegisteredTrademark]\[DownExclamation]\[AGrave]\[NonBreakingSpace]\[Section]\
+\[DoubleDot]\[Yen]}dl=1;{\[AAcute]\.aa\[RegisteredTrademark]\[AGrave]\
+\[RegisteredTrademark]\[AAcute]\[AHat]\[IGrave]}veroi=3000{\[Cent]\[Yen]\
+\[AGrave]\[RegisteredTrademark]\[IDoubleDot]\[AHat]\[DiscretionaryHyphen]\
+\[RegisteredTrademark]\[AAcute]\[AHat]\[IGrave] \[ADoubleDot]\[DoubleDot]\
+\[EGrave]\[Yen]\.aa};\"\>"},
+    {"77", "\<\"\\tif cx+2*xx1<>80 then write('\[CapitalUHat]\[CapitalUHat]') \
+else write('\[CapitalUHat]');\"\>"},
+    {"111", "\<\"gotoxy(xx1-3,iy-2);write('\[CapitalUAcute]');\"\>"},
+    {"115", "\<\"gotoxy(xx1-2,iy-2);write('\[CapitalADoubleDot]');\"\>"},
+    {"119", "\<\"gotoxy(xx1-1,iy-2);write('\[CapitalADoubleDot]');\"\>"},
+    {"123", "\<\"gotoxy(xx1,iy-2);write('\[DownQuestion]');\"\>"},
+    {"127", "\<\"gotoxy(xx1,iy-1);write('\[CapitalAGrave]');\"\>"},
+    {"131", "\<\"gotoxy(xx1+1,iy-1);write('\[CapitalADoubleDot]');\"\>"},
+    {"135", "\<\"gotoxy(xx1+2,iy-1);write('\[CapitalADoubleDot]');\"\>"},
+    {"139", "\<\"gotoxy(xx1+3,iy-1);write('\[CapitalADoubleDot]');\"\>"},
+    {"143", "\<\"gotoxy(xx1+4,iy-1);write('\[DownQuestion]');\"\>"},
+    {"147", "\<\"gotoxy(xx1+4,iy);write('\.b3');\"\>"},
+    {"151", "\<\"gotoxy(xx1+4,iy+1);write('\[CapitalUGrave]');\"\>"},
+    {"155", "\<\"gotoxy(xx1+3,iy+1);write('\[CapitalADoubleDot]');\"\>"},
+    {"159", "\<\"gotoxy(xx1+2,iy+1);write('\[CapitalADoubleDot]');\"\>"},
+    {"163", "\<\"gotoxy(xx1+1,iy+1);write('\[CapitalADoubleDot]');\"\>"},
+    {"167", "\<\"gotoxy(xx1,iy+1);write('\[CapitalUAcute]');\"\>"},
+    {"171", "\<\"gotoxy(xx1,iy+2);write('\[CapitalUGrave]');\"\>"},
+    {"175", "\<\"gotoxy(xx1-1,iy+2);write('\[CapitalADoubleDot]');\"\>"},
+    {"179", "\<\"gotoxy(xx1-2,iy+2);write('\[CapitalADoubleDot]');\"\>"},
+    {"184", "\<\"gotoxy(xx1-3,iy+2);write('\[CapitalAGrave]');\"\>"},
+    {"188", "\<\"gotoxy(xx1-3,iy+1);write('\.b3');\"\>"},
+    {"192", "\<\"gotoxy(xx1-3,iy);write('\.b3');\"\>"},
+    {"196", "\<\"gotoxy(xx1-3,iy-1);write('\.b3');\"\>"},
+    {"269", "\<\"gotoxy(xx1-2,iy-1);write('\[CapitalThorn]');\"\>"},
+    {"272", "\<\"gotoxy(xx1-1,iy-1);write('\[CapitalUHat]');\"\>"},
+    {"282", "\<\"gotoxy(xx1-1,iy);write('\[YAcute]');\"\>"},
+    {"287", "\<\"gotoxy(xx1+1,iy);write('\[CapitalUHat]');\"\>"},
+    {"290", "\<\"gotoxy(xx1+2,iy);write('\[CapitalUHat]');\"\>"},
+    {"298", "\<\"gotoxy(xx1-2,iy+1);write('\[CapitalThorn]');\"\>"},
+    {"301", "\<\"gotoxy(xx1-1,iy+1);write('\[CapitalUHat]');\"\>"},
+    {"306", "\<\"gotoxy(xx1,iy);write('\[CapitalUHat]');\"\>"},
+    {"338", \
+"\<\"textbackground(5);textcolor(14);gotoxy(xx1,yy1);write('\.ba');\"\>"},
+    {"460", \
+"\<\"textbackground(5);textcolor(14);gotoxy(xx1,yy1);write('\.b3');\"\>"},
+    {"463", \
+"\<\"textbackground(5);textcolor(14);gotoxy(xx1+1,yy1);write('\.b3');\"\>"},
+    {"482", \
+"\<\"textbackground(5);textcolor(14);gotoxy(xx1,yy1);write('\.ba');\"\>"},
+    {"485", \
+"\<\"textbackground(5);textcolor(14);gotoxy(xx1+1,yy1);write('\.ba');\"\>"},
+    {"493", "\<\"textbackground(3);textcolor(10);gotoxy(xx1,yy1);write('\
+\[YAcute]');\"\>"},
+    {"504", "\<\"textbackground(7);textcolor(26);gotoxy(xx1,yy1);write('\
+\[OSlash]');\"\>"},
+    {"642", "\<\"write('\[CapitalUHat]');\"\>"},
+    {"675", "\<\"gotoxy(xx1+che,yy1);write('\[CapitalUHat]');\"\>"},
+    {"683", "\<\"gotoxy(che,yy1);write('\[CapitalUHat]');\"\>"},
+    {"693", "\<\"gotoxy(xx1+che+2,yy1-1);write('\[CapitalUHat]');\"\>"},
+    {"701", "\<\"gotoxy(che,yy1-1);write('\[CapitalUHat]');\"\>"},
+    {"713", "\<\"gotoxy(xx1+che+2,yy1+1);write('\[CapitalUHat]');\"\>"},
+    {"721", "\<\"gotoxy(che,yy1+1);write('\[CapitalUHat]');\"\>"},
+    {"730", "\<\"gotoxy(xx1+2,yy1);write('\[OSlash]');\"\>"},
+    {"746", "\<\"gotoxy(xx2,che);write('\[CapitalUDoubleDot]');\"\>"},
+    {"749", "\<\"gotoxy(xx2,1);write('\[CapitalUHat]');\"\>"},
+    {"750", "\<\"gotoxy(xx2,24);write('\[CapitalUHat]');\"\>"},
+    {"755", "\<\"gotoxy(xx2+1,che);write('\[SZ]');\"\>"},
+    {"758", "\<\"gotoxy(xx2+1,1);write('\[CapitalUHat]');\"\>"},
+    {"759", "\<\"gotoxy(xx2+1,24);write('\[CapitalUHat]');\"\>"},
+    {"761", "\<\"gotoxy(xx2+1,10);write('\.94');\"\>"},
+    {"762", "\<\"gotoxy(xx2+1,11);write('\.88');\"\>"},
+    {"763", "\<\"gotoxy(xx2+1,12);write('\.8d');\"\>"},
+    {"764", "\<\"gotoxy(xx2+1,13);write('\.88');\"\>"},
+    {"765", "\<\"gotoxy(xx2+1,14);write('\.98');\"\>"},
+    {"770", "\<\"gotoxy(xx2+2,che);write('\[CapitalUDoubleDot]');\"\>"},
+    {"773", "\<\"gotoxy(xx2+2,1);write('\[CapitalUHat]');\"\>"},
+    {"774", "\<\"gotoxy(xx2+2,24);write('\[CapitalUHat]');\"\>"},
+    {"846", "\<\"{\[ADoubleDot]\[DoubleDot]\[EGrave]\.aa\[DoubleDot]}\"\>"},
+    {"1726", "\<\"write('\.91\.92\.80\.90\.92');\"\>"},
+    {"1857", "\<\"  line(ix+4,v2x,v2y,ord('\[CapitalIAcute]'));\"\>"},
+    {"1868", "\<\"  line(ix+4,v2x,v2y,ord('\[CapitalIAcute]'));\"\>"},
+    {"1879", "\<\"  line(ix+4,v2x,v2y,ord('\[CapitalIAcute]'));\"\>"},
+    {"1889", "\<\"  line(ix,v2x,v2y-1,ord('\[CapitalADoubleDot]'));\"\>"},
+    {"1890", "\<\"  line(ix,v2x,v2y+1,ord('\[CapitalADoubleDot]'));\"\>"},
+    {"1901", "\<\"  line(ix,v2x,v2y-1,ord('\[CapitalADoubleDot]'));\"\>"},
+    {"1912", "\<\"  line(ix,v2x,v2y+1,ord('\[CapitalADoubleDot]'));\"\>"},
+    {"1953", "\<\"  line(ix+4,v1x,v1y,ord('\[CapitalIAcute]'));\"\>"},
+    {"1977", "\<\"  line(ix,v1x,iy-1,ord('\[CapitalIAcute]'));\"\>"},
+    {"1978", "\<\"  line(ix,v1x,iy+1,ord('\[CapitalIAcute]'));\"\>"},
+    {"2031", "\<\"  write('\.8f\.80\.93\.87\.80');\"\>"},
+    {"2271", "\<\"gotoxy(r5x[kkk],r5y[kkk]);write('\[YAcute]');\"\>"},
+    {"2322", \
+"\<\"gotoxy(r4x-1,r4y-1);write('\[SZ]\[CapitalUDoubleDot]');\"\>"},
+    {"2323", \
+"\<\"gotoxy(r4x-1,r4y+1);write('\[CapitalUDoubleDot]\[SZ]');\"\>"},
+    {"2324", "\<\"if r4x<81 then begin \
+gotoxy(r4x,r4y);write('\[CapitalUHat]');end;\"\>"},
+    {"2382", \
+"\<\"gotoxy(r4x-1,r4y-1);write('\[SZ]\[CapitalUDoubleDot]');\"\>"},
+    {"2383", \
+"\<\"gotoxy(r4x-1,r4y+1);write('\[CapitalUDoubleDot]\[SZ]');\"\>"},
+    {"2384", "\<\"if r4x<81 then begin \
+gotoxy(r4x,r4y);write('\[CapitalUHat]');end;\"\>"},
+    {"2570", "\<\"write('\.94\.88\.8d\.88\.98');\"\>"},
+    {"2576", "\<\"gotoxy(5,25);write('\.84\[Yen]\[ADoubleDot]\[LeftGuillemet]\
+\[Yen]\.aa\[AHat]\[RegisteredTrademark]\[AGrave]\[EDoubleDot] ');\"\>"},
+    {"2613", "\<\"gotoxy(23,25);write('\.91\[AHat]\[RegisteredTrademark]\
+\[LeftGuillemet]\.aa\[DiscretionaryHyphen]\[RegisteredTrademark]\[Cent]\[Yen]\
+\[DiscretionaryHyphen]\[DoubleDot]\[IDoubleDot] ',col);\"\>"},
+    {"2614", "\<\"gotoxy(39,25);write('\[Currency]\[RegisteredTrademark] \
+\[ADoubleDot]\[DoubleDot]\[DiscretionaryHyphen]\[DoubleDot]\[EGrave]\
+\[NonBreakingSpace] ');\"\>"},
+    {"2616", "\<\"if fun<>1 then write('\[CapitalUHat]');\"\>"},
+    {"2619", "\<\"if fin=0 then write('\[CapitalUHat]\[CapitalUHat]\
+\[CapitalUHat]\[CapitalUHat]') else\"\>"},
+    {"2620", "\<\"for iii:=1 to (round((finx-ix)/16)) do \
+write('\[CapitalUHat]');\"\>"},
+    {"2622", "\<\"if fin=0 then begin for iii:=1 to (20000-cho) div 800+1 do \
+write('\[CapitalUHat]');end;\"\>"},
+    {"2649", "\<\"write('\.82\.80\.98 \.8a\.8e\.90\.80\.81\.8b\.9c \.82\.87\
+\.8e\.90\.82\.80\.8d');\"\>"}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{{3.963533480683689*^9, 3.9635334880979633`*^9}, 
+   3.9635335462732215`*^9, {3.9635336292321*^9, 3.9635336557762737`*^9}},
+ CellLabel->
+  "Out[48]//TableForm=",ExpressionUUID->"81dedf65-0427-4808-a20d-\
+cc712cf2f499"]
+}, Open  ]]
+},
+WindowSize->{877, 865},
+WindowMargins->{{462, Automatic}, {Automatic, 54}},
+FrontEndVersion->"11.3 for Microsoft Windows (64-bit) (March 6, 2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1469, 40, 124, "Input",ExpressionUUID->"b6e11d68-d874-4470-a056-aa5305518467"],
+Cell[2052, 64, 8142, 140, 1881, "Output",ExpressionUUID->"81dedf65-0427-4808-a20d-cc712cf2f499"]
+}, Open  ]]
+}
+]
+*)
+
